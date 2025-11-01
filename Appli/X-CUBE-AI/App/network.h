@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    network.h
   * @author  STEdgeAI
-  * @date    2025-10-27 12:12:18
+  * @date    2025-11-01 16:47:38
   * @brief   Minimal description of the generated c-implemention of the network
   ******************************************************************************
   * @attention
@@ -20,7 +20,7 @@
 
 /******************************************************************************/
 #define LL_ATON_DEFAULT_C_MODEL_NAME        "Default"
-#define LL_ATON_DEFAULT_ORIGIN_MODEL_NAME   "mnist_model"
+#define LL_ATON_DEFAULT_ORIGIN_MODEL_NAME   "ssd_mobilenet_v2_fpnlite_035_192_int8"
 
 /************************** USER ALLOCATED IOs ********************************/
 // No user allocated inputs
@@ -28,14 +28,20 @@
 
 /************************** INPUTS ********************************************/
 #define LL_ATON_DEFAULT_IN_NUM        (1)    // Total number of input buffers
-// Input buffer 1 -- Input_0_out_0
+// Input buffer 1 -- Input_2_out_0
 #define LL_ATON_DEFAULT_IN_1_ALIGNMENT   (32)
-#define LL_ATON_DEFAULT_IN_1_SIZE_BYTES  (3136)
+#define LL_ATON_DEFAULT_IN_1_SIZE_BYTES  (110592)
 
 /************************** OUTPUTS *******************************************/
-#define LL_ATON_DEFAULT_OUT_NUM        (1)    // Total number of output buffers
-// Output buffer 1 -- Softmax_15_out_0
+#define LL_ATON_DEFAULT_OUT_NUM        (3)    // Total number of output buffers
+// Output buffer 1 -- Transpose_550_out_0
 #define LL_ATON_DEFAULT_OUT_1_ALIGNMENT   (32)
-#define LL_ATON_DEFAULT_OUT_1_SIZE_BYTES  (40)
+#define LL_ATON_DEFAULT_OUT_1_SIZE_BYTES  (30760)
+// Output buffer 2 -- Transpose_564_out_0
+#define LL_ATON_DEFAULT_OUT_2_ALIGNMENT   (32)
+#define LL_ATON_DEFAULT_OUT_2_SIZE_BYTES  (61520)
+// Output buffer 3 -- Identity_1_out_0
+#define LL_ATON_DEFAULT_OUT_3_ALIGNMENT   (32)
+#define LL_ATON_DEFAULT_OUT_3_SIZE_BYTES  (61520)
 
 #endif /* LL_ATON_DEFAULT_H */

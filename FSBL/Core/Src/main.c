@@ -106,12 +106,13 @@ int main(void)
   BSP_LED_Init(LED_RED);
   BSP_LED_Init(LED_GREEN);
   BSP_LED_On(LED_BLUE);
+  // REMINDER: Remember to uncomment BSP_LED_Init below after regenerating!!!
   /* USER CODE END 2 */
 
   /* Initialize leds */
-  //BSP_LED_Init(LED_BLUE);
-  //BSP_LED_Init(LED_RED);
-  //BSP_LED_Init(LED_GREEN);
+//  BSP_LED_Init(LED_BLUE);
+//  BSP_LED_Init(LED_RED);
+//  BSP_LED_Init(LED_GREEN);
 
   /* Launch the application */
   if (BOOT_OK != BOOT_Application())
@@ -122,7 +123,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
+	  HAL_Delay(1000);
+	  BSP_LED_Off(LED_BLUE);
+	  HAL_Delay(1000);
+	  BSP_LED_On(LED_BLUE);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -231,11 +235,11 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV1;
   RCC_ClkInitStruct.APB5CLKDivider = RCC_APB5_DIV1;
   RCC_ClkInitStruct.IC1Selection.ClockSelection = RCC_ICCLKSOURCE_PLL1;
-  RCC_ClkInitStruct.IC1Selection.ClockDivider = 1;
+  RCC_ClkInitStruct.IC1Selection.ClockDivider = 2;
   RCC_ClkInitStruct.IC2Selection.ClockSelection = RCC_ICCLKSOURCE_PLL1;
   RCC_ClkInitStruct.IC2Selection.ClockDivider = 2;
   RCC_ClkInitStruct.IC6Selection.ClockSelection = RCC_ICCLKSOURCE_PLL2;
-  RCC_ClkInitStruct.IC6Selection.ClockDivider = 1;
+  RCC_ClkInitStruct.IC6Selection.ClockDivider = 2;
   RCC_ClkInitStruct.IC11Selection.ClockSelection = RCC_ICCLKSOURCE_PLL3;
   RCC_ClkInitStruct.IC11Selection.ClockDivider = 1;
 

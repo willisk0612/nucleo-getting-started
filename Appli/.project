@@ -35,16 +35,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>STM32N6XX</name>
-			<type>2</type>
-			<location>C:/Users/willi/STM32CubeIDE/workspace_1.19.0/nucleo-getting-started/Middlewares/ST/AI/Npu/Devices/STM32N6XX</location>
-		</link>
-		<link>
-			<name>ll_aton</name>
-			<type>2</type>
-			<location>C:/Users/willi/STM32CubeIDE/workspace_1.19.0/nucleo-getting-started/Middlewares/ST/AI/Npu/ll_aton</location>
-		</link>
-		<link>
 			<name>Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal.c</locationURI>
